@@ -1,0 +1,116 @@
+$header: 150px;
+$footer: 50px;
+
+.container-all {
+  height: calc(100vh - $header - $footer);
+  overflow: scroll;
+  padding: 0 20px;
+  overflow-x: hidden;
+}
+
+.container-card {
+  margin-bottom: 20px;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.options-container div{
+  display: flex;
+  width: 20%;
+  margin: 15px;
+  flex-wrap: wrap;
+  min-width: 150px;
+  flex-direction: row;
+  align-items: center;
+
+  label {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 5px;
+    color: #3a414b;
+  }
+
+  input {
+    outline: none;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    height: 25px;
+  }
+
+  select {
+    width: 100%;
+    text-align: start;
+    cursor: text;
+    border: 1px solid lightgrey;
+    height: 30px;
+    border-radius: 3px;
+    box-sizing: border-box
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+
+  button {
+    width: 120px;
+    max-width: 45%;
+    margin: 0 20px;
+  }
+}
+
+.btn-filter {
+  align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fcd535;
+  border: none;
+  border-radius: 3px;
+  color: #3a414b;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 500;
+  height: 40px;
+  justify-content: center;
+  line-height: 24px;
+  min-height: 40px;
+  min-width: 72px;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+.filter-message-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.filter-message {
+  font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
+  color: #3a414b;
+}
+
+@media (max-width: 700px) {
+  .options-container div {
+    min-width: 110px;
+  }
+}
+
+@media (max-width: 650px) {
+  .options-container div {
+    width: 40%;
+  }
+}
+
+
+
+// @media (max-width: 350px) {
+//   .options-container div {
+//     min-width: 110px;
+//   }
+// }

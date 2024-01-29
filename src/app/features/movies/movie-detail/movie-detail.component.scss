@@ -1,0 +1,118 @@
+$header: 150px;
+$footer: 50px;
+
+.container-all{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: calc(100vh - $header - $footer);
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.poster-section {
+  display: flex;
+  justify-content: center;
+  width: 45%;
+  min-width: 300px;
+}
+
+.info-section {
+  padding: 10px;
+  width: 45%;
+  min-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+
+  h3 {
+    text-align: center;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #4f5b6e;
+  }
+
+  span {
+    color: #5f728f;
+  }
+
+  .hour-container {
+    position: relative;
+    right: -70%;
+    top: -40px;
+    width: 100px;
+  }
+
+  .data {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .data-name {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .plot {
+    width: 100%;
+    text-align: justify;
+
+    font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
+    color: #5f728f;
+  }
+}
+
+.back-button {
+  align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fcd535;
+  border: none;
+  border-radius: 3px;
+  color: #0b0e11;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 500;
+  height: 40px;
+  justify-content: center;
+  line-height: 24px;
+  min-height: 40px;
+  min-width: 72px;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+.clock-icon:before {
+  content: "\1F550";
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+
+  .not-found-icon {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .not-found-icon::after {
+    content: '\003F';
+  }
+
+  p {
+    text-align: center;
+  }
+
+  button {
+    width: 50%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,35 @@
+<div class="container-all" *ngIf="id">
+  <section class="poster-section">
+    <img src="{{ currentMovie?.Poster }}" alt="">
+  </section>
+
+  <section class="info-section">
+    <h3> {{ currentMovie?.Title }} </h3>
+    <div class="data">
+      <div>
+        <span class="data-name">Type: </span><span>{{ currentMovie?.Type }}</span>
+      </div>
+      <div>
+        <span class="data-name">Year: </span> <span>{{ currentMovie?.Year }}</span>
+      </div>
+      <div>
+        <span class="data-name">Lenguage: </span><span>{{ currentMovie?.Language }}</span>
+      </div>
+
+      <div class="hour-container">
+        <span class="clock-icon">{{ currentMovie?.Runtime }}</span>
+      </div>
+    </div>
+
+    <div class="data plot">
+      <span>{{ currentMovie?.Plot }}</span>
+    </div>
+  </section>
+</div>
+
+<div *ngIf="!id" class="not-found">
+  <span class="not-found-icon"></span>
+  <p>No movie found</p>
+  <button class="back-button" (click)="backToMovies()">Back to movies</button>
+</div>
+

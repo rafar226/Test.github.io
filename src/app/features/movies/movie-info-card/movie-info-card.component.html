@@ -1,0 +1,18 @@
+<div class="search-container" *ngIf="movies?.length">
+  <input type="text" placeholder="Search"  class="search-input" [(ngModel)]="filter">
+  <!-- <span class="icon-glass"></span> -->
+
+  <div  class="container-cards">
+    <ng-container *ngFor="let movie of movies | filter: 'Title' : filter">
+        <div class="card">
+          <div class="icon-detail-container" (click)="goToDetails(movie)">
+            <span class="icon-eye"></span>
+            <span class="details-span">Go to details</span>
+          </div>
+
+          <img src="{{ movie.Poster }}" alt="">
+          {{ movie.Title }}
+        </div>
+    </ng-container>
+  </div>
+</div>

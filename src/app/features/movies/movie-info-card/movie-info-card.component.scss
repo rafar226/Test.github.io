@@ -1,0 +1,86 @@
+.container-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 45%;
+  max-width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  justify-content: center;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+}
+
+.search-input {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 50%;
+  height: 25px;
+}
+
+.icon-glass:before {
+  content: "\1F50D";
+}
+
+.icon-eye:before {
+  content: "\1F441";
+}
+
+.icon-detail-container {
+  display: flex;
+  position: absolute;
+  margin: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon-eye {
+    visibility: hidden;
+    z-index: 5;
+    display: flex;
+    color: white;
+    font-size: 44px;
+    border: 3px solid white;
+    height: 50px;
+    border-radius: 50%;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.details-span {
+  color: white;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: small;
+  text-align: center;
+  z-index: 5;
+  visibility: hidden;
+  display: flex;
+}
+
+.card:hover {
+  .icon-eye {
+    visibility: visible;
+  }
+
+  .details-span {
+    visibility: visible;
+  }
+
+  img {
+    filter:brightness(50%)
+  }
+}
