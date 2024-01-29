@@ -10,19 +10,22 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './movie-info-card.component.html',
   styleUrls: ['./movie-info-card.component.scss'],
   standalone: true,
-  imports: [CommonModule, FilterPipe, FormsModule]
+  imports: [CommonModule, FilterPipe, FormsModule],
 })
 export class MovieInfoCardComponent {
-
   @Input() movies: Movie[] | any = [];
   filter: string = '';
+  imageNotAvailable: string = '';
 
   constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.imageNotAvailable = '../../../../assets/img/Image_not_available.png';
+  }
 
   goToDetails(movie: Movie) {
     if (movie && movie.imdbID) {
       this.router.navigate(['/movies', movie.imdbID]);
     }
   }
-
 }

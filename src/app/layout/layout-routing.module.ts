@@ -19,11 +19,7 @@ const routes: Routes = [
       {
         path: 'movies',
         loadChildren: () => import('../features/movies/movies.module').then(m => m.MoviesModule),
-      },
-      {
-        path: 'blank-page',
-        loadChildren: () => import('./blank-page/blank-page.module').then(m => m.BlankPageModule),
-      },
+      }
     ],
   },
 ];

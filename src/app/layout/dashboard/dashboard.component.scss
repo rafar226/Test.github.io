@@ -1,0 +1,128 @@
+$header: 150px;
+$footer: 50px;
+
+.main {
+  height: calc(100vh - $header - $footer);
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+.main-section {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 15px;
+    margin-top: 20px;
+
+    .main-text {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+
+      h1 {
+        color: #f5b300;
+        font-family: "Inter", Helvetica;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+    }
+
+    .secundary-text {
+      width: 80%;
+      display: flex;
+      margin: 0 auto;
+      height: 200px;
+
+      p {
+        color: #7d7d7d;
+        font-family: "Inter", Helvetica;
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 32.2px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+}
+
+.info-section {
+  width: 85%;
+  background-color: #f5b300;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px #a07500;
+  height: auto;
+  min-height: 250px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+
+  .informative-component-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .img-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 10rem;
+    }
+  }
+
+  .info-button-container {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    .info-text {
+      width: 100%;
+      color: black;
+      font-family: "Inter", Helvetica;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    button {
+      border: 1px solid black;
+      background: black;
+      color: white;
+      border-radius: 10px;
+      width: 30%;
+      min-width: 120px;
+      font-family: "Inter", Helvetica;
+      font-weight: 500;
+      font-size: 20px;
+      height: 24px;
+      letter-spacing: 0;
+      line-height: 0.5rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .informative-component-container {
+    flex-direction: column;
+  }
+
+  .img-container {
+    margin: 20px 0;
+  }
+
+  .info-button-container {
+    margin: 20px 0;
+  }
+}

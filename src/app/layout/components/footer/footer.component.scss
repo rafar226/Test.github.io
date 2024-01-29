@@ -2,7 +2,6 @@ footer {
   background: black;
   padding: 0.5rem 0;
   width: 100%;
-  color: white;
   text-align: center;
   height:50px;
   line-height:50px;
@@ -10,4 +9,15 @@ footer {
   left:0;
   width:100%;
   position: absolute;
+
+  span {
+    font-family: "Inter", Helvetica;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    height: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-align: center;
+  }
 }

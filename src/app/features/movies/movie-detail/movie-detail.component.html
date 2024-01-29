@@ -1,13 +1,16 @@
 <div class="container-all" *ngIf="id">
   <section class="poster-section">
-    <img src="{{ currentMovie?.Poster }}" alt="">
+    <img src="{{ currentMovie?.Poster === 'N/A' ? imageNotAvailable : currentMovie?.Poster }}" alt="">
   </section>
 
   <section class="info-section">
     <h3> {{ currentMovie?.Title }} </h3>
     <div class="data">
+      <div class="hour-container">
+        <span class="clock-icon">{{ currentMovie?.Runtime }}</span>
+      </div>
       <div>
-        <span class="data-name">Type: </span><span>{{ currentMovie?.Type }}</span>
+        <span class="data-name">Type: </span><span>{{ currentMovie?.Type | titlecase }}</span>
       </div>
       <div>
         <span class="data-name">Year: </span> <span>{{ currentMovie?.Year }}</span>
@@ -15,14 +18,20 @@
       <div>
         <span class="data-name">Lenguage: </span><span>{{ currentMovie?.Language }}</span>
       </div>
-
-      <div class="hour-container">
-        <span class="clock-icon">{{ currentMovie?.Runtime }}</span>
+      <div>
+        <span class="data-name">Genre: </span><span>{{ currentMovie?.Genre }}</span>
       </div>
     </div>
-
     <div class="data plot">
       <span>{{ currentMovie?.Plot }}</span>
+    </div>
+
+    <div class="data">
+      <span class="data-name">Rating: <meter min="0" max="10" value="{{ currentMovie?.imdbRating }}"
+          class="rating"></meter></span>
+    </div>
+    <div class="data">
+      <span class="data-name">Actors: </span><span>{{ currentMovie?.Actors }}</span>
     </div>
   </section>
 </div>
@@ -32,4 +41,3 @@
   <p>No movie found</p>
   <button class="back-button" (click)="backToMovies()">Back to movies</button>
 </div>
-

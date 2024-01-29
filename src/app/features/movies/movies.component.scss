@@ -14,13 +14,13 @@ $footer: 50px;
 
 .options-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.options-container div{
+.options-container div {
   display: flex;
-  width: 20%;
+  // width: 20%;
   margin: 15px;
   flex-wrap: wrap;
   min-width: 150px;
@@ -28,7 +28,7 @@ $footer: 50px;
   align-items: center;
 
   label {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Inter";
     margin-bottom: 5px;
     color: #3a414b;
   }
@@ -90,27 +90,48 @@ $footer: 50px;
   margin-top: 40px;
 }
 
-.filter-message {
-  font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
-  color: #3a414b;
+.welcome-message{
+  font-family: "Inter";
+  color: #fcd535;
+  font-size: 40px;
+  text-shadow: 3px 3px 3px lightgray;
 }
 
-@media (max-width: 700px) {
+.filter-message {
+  font-family: "Inter";
+  color: #3a414b;
+  font-size: 30px;
+}
+
+@media (min-width: 800px) {
+  form {
+    display: flex;
+    align-items: center;
+  }
+
+  .options-container {
+    width: 75vw;
+    flex-wrap: nowrap;
+  }
+
+  .button-container {
+    width: 25vw;
+    margin-top: 15px;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 750px) {
   .options-container div {
-    min-width: 110px;
+    width: 25vw;
   }
 }
 
 @media (max-width: 650px) {
-  .options-container div {
-    width: 40%;
+  .options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 
-
-
-// @media (max-width: 350px) {
-//   .options-container div {
-//     min-width: 110px;
-//   }
-// }

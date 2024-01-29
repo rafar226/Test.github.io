@@ -29,7 +29,7 @@ $footer: 50px;
 
   h3 {
     text-align: center;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Inter";
     color: #4f5b6e;
   }
 
@@ -40,7 +40,7 @@ $footer: 50px;
   .hour-container {
     position: relative;
     right: -70%;
-    top: -40px;
+    top: 20px;
     width: 100px;
   }
 
@@ -61,8 +61,7 @@ $footer: 50px;
   .plot {
     width: 100%;
     text-align: justify;
-
-    font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
+    font-family: "Inter";
     color: #5f728f;
   }
 }
@@ -115,4 +114,26 @@ $footer: 50px;
     width: 50%;
     margin: 0 auto;
   }
+}
+
+.rating {
+  position: relative;
+  appearance: none;
+  color: transparent;
+  width: auto;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 25px;
+}
+
+.rating::before {
+  --percent: calc(4.3/5*100%);
+  content: '★★★★★';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(0,0,0,0.2);
+  background: linear-gradient(90deg, gold var(--percent), rgba(0,0,0,0.2) var(--percent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

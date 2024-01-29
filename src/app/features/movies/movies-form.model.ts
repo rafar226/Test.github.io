@@ -20,7 +20,7 @@ export class MoviesFormHelper {
       title: [detail ? detail.title : null],
       year: [detail ? detail.year : null],
       type: [detail ? detail.type : null],
-      id: [detail ? detail.id : null]
+      id: [detail ? detail.id : null],
     });
   }
 
@@ -29,7 +29,7 @@ export class MoviesFormHelper {
       title: form.get('title'),
       year: form.get('year'),
       type: form.get('type'),
-      id: form.get('id')
+      id: form.get('id'),
     };
   }
 

@@ -1,57 +1,50 @@
-
-  <div class="container-all">
-
-      <div class="container-card">
-        <form role="form" [formGroup]="moviesFilterForm">
-
-          <div class="options-container">
-            <div>
-              <label for="title">Title: </label>
-              <input type="text" id="title" name="title" placeholder="Name" formControlName="title">
-            </div>
-
-            <div>
-              <label for="year">Year of release: </label>
-              <input type="number" id="year" name="year" placeholder="Year" formControlName="year">
-            </div>
-
-            <div>
-              <label for="type">Type: </label>
-              <select formControlName="type" id="type">
-                <option *ngFor="let type of types" [ngValue]="type.value">
-                  {{ type.name }}
-                </option>
-              </select>
-            </div>
-          </div>
-
-          <div class="button-container">
-            <button
-              type="button"
-              class="btn-filter"
-              (click)="filterData()">
-              Filter
-            </button>
-            <button
-              type="button"
-              class="btn-filter"
-              (click)="resetFilters()">
-              Reset
-            </button>
-          </div>
-        </form>
+<div class="container-all">
+  <div class="container-card">
+    <form role="form" [formGroup]="moviesFilterForm">
+      <div class="options-container">
+        <div>
+          <label for="title">Title: </label>
+          <input type="text" id="title" name="title" placeholder="Name" formControlName="title"
+            (keyup.enter)="filterData()">
+        </div>
+        <div>
+          <label for="year">Year: </label>
+          <select formControlName="year" id="year">
+            <option value="">All</option>
+            <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+          </select>
+        </div>
+        <div>
+          <label for="type">Type: </label>
+          <select formControlName="type" id="type">
+            <option *ngFor="let type of types" [ngValue]="type.value">
+              {{ type.name }}
+            </option>
+          </select>
+        </div>
       </div>
-
-
-    <div>
-      <app-movie-info-card [movies]="movies$ | async">
-      </app-movie-info-card>
-    </div>
-
-    <div class="filter-message-container">
-      <span *ngIf="!movies$" class="filter-message">Please filter to get your favorite movies</span>
-    </div>
-
+      <div class="button-container">
+        <button type="button" class="btn-filter" (click)="filterData()">
+          Filter
+        </button>
+        <button type="button" class="btn-filter" (click)="resetFilters()">
+          Reset
+        </button>
+      </div>
+    </form>
   </div>
 
+  <div>
+    <app-movie-info-card [movies]="movies$ | async">
+    </app-movie-info-card>
+  </div>
 
+  <div class="filter-message-container" *ngIf="!movies$">
+    <span class="welcome-message">Welcome!</span> <br>
+    <span class="filter-message">Please filter to get your favorite movies</span>
+  </div>
+
+  <div class="filter-message-container" *ngIf="noResult">
+    <span class="filter-message">Ups.. no results, please filter again.</span>
+  </div>
+</div>
