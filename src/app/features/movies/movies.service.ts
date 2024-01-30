@@ -3,9 +3,7 @@ import { Observable, map, tap } from 'rxjs';
 import { HttpParams } from '@angular/common/http';
 import { MoviesEndpointService } from 'src/app/services';
 import { HttpService } from 'src/app/services/http-service.service';
-import { Movie, MoviesSearchDto } from './movies.model';
-import { FilterMovies } from './filter.model';
-import { MovieDetail } from './movie-detail';
+import { FilterMovies, Movie, MovieDetail, MoviesSearchDto } from './models';
 
 @Injectable({
   providedIn: 'root',

@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import { Observable, firstValueFrom, map, tap } from 'rxjs';
-import { MoviesService } from './movies.service';
-import { Movie } from './movies.model';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { MoviesControls, MoviesFormHelper } from './movies-form.model';
-import { FilterMovies } from './filter.model';
+import { Observable, tap } from 'rxjs';
+import { MoviesService } from './movies.service';
 import { LayoutService } from 'src/app/services/layout.service';
+import { FilterMovies, Movie, MoviesControls, MoviesFormHelper } from './models';
 
 @Component({
   selector: 'app-movies',
@@ -18,6 +16,7 @@ export class MoviesComponent {
   controls!: MoviesControls;
   years: Array<number> = [];
   noResult: boolean = false;
+  showTitleWarning: boolean = false;
   types = [
     {
       name: 'Movie',
@@ -49,6 +48,10 @@ export class MoviesComponent {
   }
 
   filterData() {
+    if(!this.moviesFilterForm.valid) {
+      this.showTitleWarning = true;
+      return;
+    }
     const filter: FilterMovies = {
       Title: this.controls.title?.value,
       Year: this.controls.year?.value,

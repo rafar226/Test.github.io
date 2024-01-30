@@ -1,4 +1,4 @@
-import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export interface MoviesFormModel {
   title?: string;
@@ -17,7 +17,7 @@ export interface MoviesControls {
 export class MoviesFormHelper {
   static createForm(fb: FormBuilder, detail?: MoviesFormModel) {
     return fb.group({
-      title: [detail ? detail.title : null],
+      title: [detail ? detail.title : null, Validators.required],
       year: [detail ? detail.year : null],
       type: [detail ? detail.type : null],
       id: [detail ? detail.id : null],

@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { Movie } from '../movies.model';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FilterPipe } from 'src/app/shared/filter.pipe';
-import { FormsModule } from '@angular/forms';
+import { Movie } from '../models';
 
 @Component({
   selector: 'app-movie-info-card',

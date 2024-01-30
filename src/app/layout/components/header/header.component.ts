@@ -20,14 +20,12 @@ export class HeaderComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.layoutService.headerEventSubject$.subscribe(
       (checkboxState: boolean) => {
-        this.selectCheckbox(checkboxState);
+        this.selectCheckbox();
       }
     );
   }
 
-  selectCheckbox(checkboxState: boolean) {
-    let checkbox = this.inputCheckbox.nativeElement.value;
-    checkbox = checkboxState === true ? 'on' : 'off';
+  selectCheckbox() {
     this.inputCheckbox.nativeElement.checked = false;
   }
 }
