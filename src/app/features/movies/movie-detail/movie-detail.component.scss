@@ -29,7 +29,7 @@ $footer: 50px;
 
   h3 {
     text-align: center;
-    font-family: "Inter";
+    font-family: "Inter", Helvetica;
     color: #4f5b6e;
   }
 
@@ -61,7 +61,7 @@ $footer: 50px;
   .plot {
     width: 100%;
     text-align: justify;
-    font-family: "Inter";
+    font-family: "Inter", Helvetica;
     color: #5f728f;
   }
 }
@@ -135,5 +135,6 @@ $footer: 50px;
   color: rgba(0,0,0,0.2);
   background: linear-gradient(90deg, gold var(--percent), rgba(0,0,0,0.2) var(--percent));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }

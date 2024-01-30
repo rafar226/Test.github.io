@@ -3,4 +3,5 @@ export interface FilterMovies {
   Year?: number;
   Type?: string;
   id?: string;
+  page: number;
 }

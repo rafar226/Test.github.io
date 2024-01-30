@@ -1,8 +1,5 @@
-$header: 150px;
-$footer: 50px;
-
 .main {
-  height: calc(100vh - $header - $footer);
+  height: 700px;
   overflow: scroll;
   overflow-x: hidden;
   padding: 10px;

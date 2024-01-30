@@ -3,8 +3,8 @@
 
   <div class="container-cards">
     <ng-container *ngFor="let movie of movies | filter: 'Title' : filter">
-      <div class="card">
-        <div class="icon-detail-container" (click)="goToDetails(movie)">
+      <div class="card" (click)="goToDetails(movie)">
+        <div class="icon-detail-container">
           <span class="icon-eye"></span>
           <span class="details-span">Go to details</span>
         </div>

@@ -27,7 +27,7 @@ $footer: 50px;
   align-items: center;
 
   label {
-    font-family: "Inter";
+    font-family: "Inter", Helvetica;
     margin-bottom: 5px;
     color: #3a414b;
   }
@@ -91,22 +91,35 @@ $footer: 50px;
 }
 
 .welcome-message{
-  font-family: "Inter";
+  font-family: "Inter", Helvetica;
   color: #fcd535;
   font-size: 40px;
   text-shadow: 3px 3px 3px lightgray;
 }
 
 .filter-message {
-  font-family: "Inter";
+  font-family: "Inter", Helvetica;
   color: #3a414b;
   font-size: 30px;
 }
 
-.title-warning{
+.title-warning {
   color: red;
   position: absolute;
   top: 80px;
+}
+
+.see-more-button {
+  background-color: #fcd535;
+  border: none;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 20px;
+  height: 25px;
+  cursor: pointer;
+  width: 45vw;
+  font-family: "Inter", Helvetica;
 }
 
 @media (min-width: 800px) {

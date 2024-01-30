@@ -30,6 +30,10 @@ export class MoviesService {
       httpParams = httpParams.set('y', filter.Year);
     }
 
+    if (filter.page) {
+      httpParams = httpParams.set('page', filter.page.toString());
+    }
+
     return this.http
       .get<MoviesSearchDto>(this.apiEndpointService.getMovies(), httpParams)
       .pipe(map((x) => x.Search));
