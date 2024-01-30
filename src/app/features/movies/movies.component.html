@@ -39,7 +39,7 @@
   <div>
     <app-movie-info-card [movies]="movies$ | async">
     </app-movie-info-card>
-    <button *ngIf="movies$" (click)="searchMore()" class="see-more-button">See more movies</button>
+    <button *ngIf="movies$ && !noResult" (click)="searchMore()" class="see-more-button">See more movies</button>
   </div>
 
   <div class="filter-message-container" *ngIf="!movies$">

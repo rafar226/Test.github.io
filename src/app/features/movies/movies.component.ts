@@ -68,6 +68,8 @@ export class MoviesComponent {
       tap((results: Movie[]) => {
         if (results === undefined) {
           this.noResult = true;
+        } else {
+          this.noResult = false;
         }
         return results;
       })

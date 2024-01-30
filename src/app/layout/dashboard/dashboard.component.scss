@@ -1,7 +1,6 @@
 .main {
   height: 700px;
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 10px;
 }
 
@@ -121,5 +120,12 @@
 
   .info-button-container {
     margin: 20px 0;
+  }
+}
+
+
+@media (min-width: 700px) {
+  .main {
+    height: 550px;
   }
 }
